@@ -9,13 +9,22 @@ using System.Threading.Tasks;
  * Date Modified: Friday, 13th, 2016
  * StudentID: 300847239
  * Description: This version demonstrates Github and Version Control best practices. We also explore Unit Testing.
- * Version: 0.2 - Added Getusername method 
+ * Version: 0.3 - Updated Comments for driver class Program 
  */
 
 namespace COMP123__S2016___Lesson1B
 {
+    /*
+     This is the driver class for our program
+     * @class Program
+     * @constructor Main
+     */
     class Program
     {
+        /**
+         Main method for class Program
+         * @Param {string[]} args
+         */
         static void Main(string[] args)
         {
             GetUsername();
