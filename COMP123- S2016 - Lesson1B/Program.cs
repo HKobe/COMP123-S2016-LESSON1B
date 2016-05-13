@@ -9,7 +9,7 @@ using System.Threading.Tasks;
  * Date Modified: Friday, 13th, 2016
  * StudentID: 300847239
  * Description: This version demonstrates Github and Version Control best practices. We also explore Unit Testing.
- * Version: 0.3 - Updated Comments for driver class Program 
+ * Version: 0.4 - Extracted OutputStringToConsole from GetUsername method
  */
 
 namespace COMP123__S2016___Lesson1B
@@ -38,11 +38,36 @@ namespace COMP123__S2016___Lesson1B
         {
             //Initialize Variables
             string username = "";
-            Console.Write("Enter Username: ");
+            OutputStringToConsole("Enter Username: ", false);
+            {
             username = Console.ReadLine();
-            Console.WriteLine("/n ========================");
-            Console.WriteLine("You Entered: " + username);
+            }
+
+            Console.WriteLine("\n ======================== \n ");
+            Console.WriteLine("You Entered: " + username + "\n");
             return username;
+        }
+        /*This method writes a string to the console. Parameers allow the user to choose to add a newLine Char
+         *@method OutputStringToConsole
+         * @param {string} outputString
+         * @return {string} outputString
+         */
+
+        private static string NewMethod(string username)
+        {
+            username = Console.ReadLine();
+            return username;
+        }
+        private static string OutputStringToConsole(string outputString, bool hasNewLine)
+        {
+            if(hasNewLine)
+            {
+                Console.WriteLine(outputString);
+            } else 
+            {
+                Console.Write(outputString);
+            }
+            return outputString;
         }
     }
 }
