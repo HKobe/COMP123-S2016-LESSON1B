@@ -9,7 +9,7 @@ using System.Threading.Tasks;
  * Date Modified: Friday, 13th, 2016
  * StudentID: 300847239
  * Description: This version demonstrates Github and Version Control best practices. We also explore Unit Testing.
- * Version: 0.4 - Extracted OutputStringToConsole from GetUsername method
+ * Version: 0.5 - Added Lesson1UnitTest
  */
 
 namespace COMP123__S2016___Lesson1B
@@ -19,7 +19,7 @@ namespace COMP123__S2016___Lesson1B
      * @class Program
      * @constructor Main
      */
-    class Program
+    public class Program
     {
         /**
          Main method for class Program
@@ -58,15 +58,13 @@ namespace COMP123__S2016___Lesson1B
             username = Console.ReadLine();
             return username;
         }
-        private static string OutputStringToConsole(string outputString, bool hasNewLine)
+        public static string OutputStringToConsole(string outputString, bool hasNewLine)
         {
-            if(hasNewLine)
-            {
-                Console.WriteLine(outputString);
-            } else 
-            {
-                Console.Write(outputString);
-            }
+            
+           //refactored using a turnanry operator (? is true , : if false)
+            string suffixString = hasNewLine ? "\n" : "";
+            Console.WriteLine(outputString + suffixString);
+
             return outputString;
         }
     }
